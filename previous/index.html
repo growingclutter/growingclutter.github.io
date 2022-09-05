@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Isla Clarke | Portfolio | Growing Clutter</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+/*.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: 
+    'header header header header' 
+    'left right right right' 
+	'left left left right'
+    'footer footer footer footer';*/
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.left,
+.right {
+  padding: 18px;
+  height: 260px; 
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  text-align: left;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  text-align: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Template using Grid</h2>
+<p>In this example, we have created a header, three unequal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect.</p>
+<p><strong>Note:</strong> The Grid Layout Module is not supported in Internet Explorer or Edge 15 eand earlier versions.</p>
+
+<div class="grid-container">
+  <div class="header">
+    <h2>Isla Clarke | Portfolio</h2>
+  </div>
+  
+  <div class="grid-item" style="background-color:#aaa;">Column 1l</div>
+  <div class="grid-item" style="background-color:#ccc;">Column 1r</div>
+  <div class="grid-item" style="background-color:#aaa;">Column 2l</div>
+  <div class="grid-item" style="background-color:#ccc;">Column 2r</div>
+  <div class="grid-item" style="background-color:#aaa;">Column 3l</div>
+  <div class="grid-item" style="background-color:#ccc;">Column 3r</div>
+  <div class="grid-item" style="background-color:#aaa;">Column 4l</div>
+  <div class="grid-item" style="background-color:#ccc;">Column 4r</div>
+  
+  <div class="footer">
+    <p>(put platforms here)</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+

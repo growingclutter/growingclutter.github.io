@@ -23,23 +23,6 @@ body.body-1 {
   background-color: #f5d0d0;
 }
 
-audio.audio-1 {
-  background-color: transparent;
-}
-
-audio.audio-player {
-  height: 50px;
-  width: 350px;
-  background: #444;
-  box-shadow: 0 0 20px 0 #000a;
-  font-family: arial;
-  color: white;
-  font-size: 0.75em;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: 6px auto;
-}
-
 @media screen and (min-width: 37.5625rem) {
   /* Text Elements */
 
@@ -70,7 +53,7 @@ audio.audio-player {
     color: #ec7963;
     text-align: center;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 23px;
     font-family: 'Playfair Display', serif;
   }
 
@@ -171,5 +154,12 @@ audio.audio-player {
 
   .container-grid.container-5 {
     background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 75.0625rem) {
+  .container-grid.container-3 {
+    grid-template-columns: minmax(auto, 25%) minmax(auto, 45%);
+    grid-template-rows: auto;
   }
 }
